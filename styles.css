@@ -327,3 +327,62 @@ body.page-contact .ilz-launcher{bottom:104px}
 .tagline{flex-basis:100%;font-size:15px;font-weight:700;letter-spacing:.3px;margin:4px 0 0;color:#242428}
 .site-footer.footer-dark .tagline{color:#fff}
 .footer-in,.foot2-in{flex-wrap:wrap}
+
+/* UI/UX REVIEW ROUND 2026-11-20 (Variant 8, 31 approved items) */
+.kick{color:#242428;display:inline-block;border-bottom:3px solid #FFCC01;padding-bottom:5px}
+.post-card small,.step-sec .get small{color:#242428}
+.view-demo{color:#242428}
+.faq-sign{color:#242428}
+.chain-inline .w{color:#242428}
+.chip{border-radius:9px}
+.demo-label{border-radius:9px}
+.foot-brand-x{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.stmt-block .svc-line{font-size:17px;margin-top:12px;max-width:520px;line-height:1.55}
+.cover-box p{font-size:15px;margin-top:6px;line-height:1.5}
+.covers-quad2 .cq2 p{font-size:15px;margin-top:5px;line-height:1.5}
+.shadow-card{border:1.6px solid #cfcfd3;box-shadow:none}
+.explore-pills{gap:0}
+.explore-pills a{flex:1;text-align:center}
+.ejoin{width:44px;display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 auto}
+.ejoin:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:3px solid #242428}
+.ejoin i{width:13px;height:13px;border-radius:50%;background:#FFCC01;border:2.5px solid #242428;position:relative;z-index:1}
+.step-sec .gets{max-width:none}
+.step-sec>p{max-width:900px}
+.pkg-card.pkg-mid{box-shadow:inset 0 54px 0 #242428;padding-top:14px}
+.pkg-card.pkg-mid h3{color:#FFCC01}
+.bf{display:block;border:1.6px solid #cfcfd3;border-radius:8px;overflow:hidden;background:#fff;line-height:0}
+.bf-bar{display:flex;gap:5px;align-items:center;background:#f0f0f2;padding:6px 9px}
+.bf-bar i{width:8px;height:8px;border-radius:50%;background:#c9c9cd;display:block}
+.bf img{display:block;width:100%;height:auto}
+.demo-visual .bf{border:none;border-radius:0}
+.btn-wht{background:#fff;border:2px solid #242428;margin-left:10px}
+.detail-cols{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+.diag-stack{display:none}
+.ds-row{border:1.6px solid #242428;border-radius:9px;padding:12px;font-weight:700;background:#fff;margin:0 auto;max-width:300px;text-align:center;font-size:16.5px}
+.ds-arr{text-align:center;font-size:22px;margin:4px 0}
+.ds-z{width:74px;height:74px;border-radius:50%;background:#FFCC01;margin:8px auto 4px;display:flex;align-items:center;justify-content:center}
+.ds-z svg{width:38px;height:auto;display:block}
+.ds-g{text-align:center;font-weight:700;font-size:17px}
+.post-band{margin:-20px -20px 16px;border-radius:12px 12px 0 0;overflow:hidden;line-height:0}
+.post-band svg{width:100%;height:54px;display:block}
+.post-date{font-size:14px;color:#5c5c60;margin:-4px 0 8px}
+.soon-cards{max-width:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.soon-cards li{background:#f4f4f5;border:1px solid #e2e2e5;border-radius:12px;padding:16px 18px;font-size:16.5px}
+.soon-cards li:before{display:none}
+.role-list.wide{max-width:900px}
+.role-desc{display:block;font-size:15px;color:#5c5c60;margin-top:2px}
+.team-grid{align-items:stretch}
+.team-card{height:100%;display:flex;flex-direction:column}
+.post-body{margin-left:auto;margin-right:auto;max-width:780px}
+.flabel{display:block;font-weight:700;font-size:15px;margin:0 0 6px}
+.cta-z{margin-top:10px}
+@media(max-width:760px){
+ .detail-cols{grid-template-columns:1fr}
+ .diag-panel>svg{display:none}
+ .diag-stack{display:block}
+ .soon-cards{grid-template-columns:1fr}
+ .contact-grid .form-box8{order:-1}
+ .btn-wht{margin-left:0;margin-top:10px}
+}
+
+@media(max-width:760px){.chain-inline{flex-wrap:nowrap}.chain-inline .link{flex:1 1 12px;width:auto;min-width:10px}}
