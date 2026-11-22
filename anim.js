@@ -1,3 +1,7 @@
+/* Interlinkz Variant 8 animation layer.
+   Desktop only. Every ScrollTrigger gsap.from sets immediateRender: false,
+   so nothing is pre-hidden: each element sits fully visible in its final
+   state until its animation moment arrives, then plays and settles. */
 (function () {
   if (window.innerWidth < 1024 || !window.gsap) return;
   gsap.registerPlugin(ScrollTrigger);
@@ -6,9 +10,9 @@
   /* D8 frame sequence: the Z mark behind the CTA assembles from its three bars */
   document.querySelectorAll(".seq-zmark").forEach(function (z) {
     var tl = gsap.timeline({ scrollTrigger: { trigger: z, start: "top 92%", once: true } });
-    tl.from(z.querySelector(".zp-top"), { y: -34, opacity: 0, duration: .55, ease: "power3.out" })
-      .from(z.querySelector(".zp-diag"), { x: 34, opacity: 0, duration: .55, ease: "power3.out" }, "-=0.25")
-      .from(z.querySelector(".zp-bot"), { y: 34, opacity: 0, duration: .55, ease: "power3.out" }, "-=0.25");
+    tl.from(z.querySelector(".zp-top"), { y: -34, opacity: 0, duration: .55, ease: "power3.out", immediateRender: false })
+      .from(z.querySelector(".zp-diag"), { x: 34, opacity: 0, duration: .55, ease: "power3.out", immediateRender: false }, "-=0.25")
+      .from(z.querySelector(".zp-bot"), { y: 34, opacity: 0, duration: .55, ease: "power3.out", immediateRender: false }, "-=0.25");
   });
 
   /* Hatched Z marks draw in on detail heroes */
@@ -22,19 +26,19 @@
 
   /* Bands sweep in */
   gsap.utils.toArray(".band").forEach(function (b) {
-    gsap.from(b, { x: -70, opacity: 0, duration: .8, ease: "power3.out",
+    gsap.from(b, { x: -70, opacity: 0, duration: .8, ease: "power3.out", immediateRender: false,
       scrollTrigger: { trigger: b, start: "top 96%", once: true } });
   });
 
   /* Statement blocks rise in */
   gsap.utils.toArray("[data-rise]").forEach(function (el) {
-    gsap.from(el, { y: 30, opacity: 0, duration: .7, ease: "power3.out",
+    gsap.from(el, { y: 30, opacity: 0, duration: .7, ease: "power3.out", immediateRender: false,
       scrollTrigger: { trigger: el, start: st.start, once: true } });
   });
 
   /* Chain groups: children light in sequence */
   document.querySelectorAll("[data-joins]").forEach(function (g) {
-    gsap.from(g.children, { opacity: 0, y: 14, duration: .45, stagger: .12, ease: "power2.out",
+    gsap.from(g.children, { opacity: 0, y: 14, duration: .45, stagger: .12, ease: "power2.out", immediateRender: false,
       scrollTrigger: { trigger: g, start: st.start, once: true } });
   });
 
@@ -42,7 +46,7 @@
   document.querySelectorAll("[data-nodes]").forEach(function (g) {
     var nodes = g.querySelectorAll(".pnode");
     if (!nodes.length) return;
-    gsap.from(nodes, { scale: 0, transformOrigin: "center", duration: .4, stagger: .1, ease: "back.out(2)",
+    gsap.from(nodes, { scale: 0, transformOrigin: "center", duration: .4, stagger: .1, ease: "back.out(2)", immediateRender: false,
       scrollTrigger: { trigger: g, start: st.start, once: true } });
     gsap.to(nodes, { opacity: .35, duration: .5, stagger: .22, repeat: -1, yoyo: true, repeatDelay: .8, delay: 1.2 });
   });
