@@ -205,8 +205,8 @@ a{color:inherit;text-decoration:none}
 .about-hero h1{font-size:52px}
 }
 @media (max-width:760px){
-.main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:10px 28px 16px;border-bottom:1.5px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease,visibility .3s}
-.main-nav.open{opacity:1;visibility:visible;transform:translateY(0)}
+.main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:0 28px 0 44px;border-bottom:1.5px solid var(--line);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-8px);transition:max-height .45s ease,opacity .3s ease,transform .35s ease,padding .45s ease,visibility 0s linear .45s}
+.main-nav.open{max-height:330px;padding:10px 28px 16px 44px;opacity:1;visibility:visible;transform:translateY(0);transition:max-height .45s ease,opacity .3s ease,transform .35s ease,padding .45s ease}
 .main-nav a{padding:11px 0;border-bottom:1px solid var(--line)}
 .main-nav a:last-child{border-bottom:none}
 .nav-toggle{display:block}
@@ -417,3 +417,18 @@ body.page-contact .ilz-launcher{bottom:104px}
 .rev-stars{color:#FFCC01;font-size:17px;letter-spacing:3px}
 .rev-card p{font-size:15.5px;margin-top:10px}
 .rev-card .rev-name{font-weight:800;margin-top:12px}
+
+/* Responsive gate fix 2026-11-23: slim the quote tab on small screens and keep
+   all page content clear of its band; the Link Chain strip wraps; the Contact
+   form box fits the screen; on Contact the chat launcher stays off the form */
+@media(max-width:760px){
+ .quote-tab{padding:10px 5px;font-size:11px;letter-spacing:1.2px}
+ .wrap{padding-left:44px}
+ .chain-inline{flex-wrap:wrap}
+ .chain-inline .link{flex:0 1 22px;min-width:10px}
+ .contact-grid{grid-template-columns:minmax(0,1fr)}
+ .contact-grid>*{min-width:0}
+ .form-box8{min-width:0}
+ .form-box8 svg{max-width:100%}
+ body.page-contact #ilz-launcher{display:none}
+}
